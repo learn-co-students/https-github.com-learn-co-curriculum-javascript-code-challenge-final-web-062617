@@ -1,36 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>JavaScript Code Challenge - Final</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <script type="text/javascript" src='./lib/jquery-3.2.1.js'></script>
-  </head>
-  <body>
-    <nav class="green">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Instant-Gram</a>
-      </div>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Code Challenge - Final</title>
+  <script type="text/javascript" src='./lib/jquery-3.2.1.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  <style media="screen">
+  #add-new-picture-button {
+    background-color: #4CAF50;
+  }
+  nav {
+    background-color:#0c84e4
+  }
 
-    <div class="container">
-      <div class="row">
-        <div class="col s4">
-          <form id="photo-form">
-            <label for="image_url">Image Url</label>
-            <input type='text' name='image_url' />
-            <label for="caption">Caption</label>
-            <input type='text' name='caption' />
-            <input type='submit' />
-          </form>
-        </div>
-
-        <div class='col s8'>
-          <div id='photo-list'></div>
-        </div>
-      </div>
-
+  nav > div {
+    padding-left:20px;
+  }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">// DIY-Gram</a>
     </div>
-    <script type="text/javascript" src='src/index.js'></script>
-  </body>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div style='width:250px;margin:auto;margin-top:50px'>
+          <a id='add-new-picture-button' class="waves-effect waves-light btn modal-trigger" href="#new-image">Add a new picture</a>
+        </div>
+        <div id="new-image" class="modal">
+          <div class="modal-content">
+            <form id="photo-form">
+              <label for="image_url">Image Url</label>
+              <input id='image-url' type='text' name='image_url' />
+              <label for="caption">Caption</label>
+              <input id='caption' type='text' name='caption' />
+              <input id='new-image-submit-button' value='Add picture' type='submit' />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div id='images-container' class="col s6 m12">
+
+      </div>
+    </div>
+
+
+  </div>
+  <script type="text/javascript" src='src/index.js'></script>
+</body>
 </html>

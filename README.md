@@ -2,25 +2,42 @@
 
 ## Objectives
 
-+ Constructors / Prototypes or ES6 Classes
-+ Callbacks
 + DOM Manipulation
 + Events and Event Handlers
++ Callbacks
++ Constructors / Prototypes or ES6 Classes
+
 
 ## Instructions
 
-Today we're going to build out an image-sharing application called "Instantgram". Users will provide an image URL and a caption in a form. When the form is submitted, we should append that image into the DOM.
+Today we're going to build out an image-sharing application called "DIY-Gram". It's very Instagram-ish in functionality.
 
-Instant-gram is anti-persistence, so we won't be making any requests to a backend. Each time we refresh, all the photos will disappear.
+When users want to add a picture to their feed they will click the 'Add a picture' button and provide an image URL and a caption in a modal. When the form is submitted, we should append that image into the DOM (We included the Materialize CSS library to assist with the modal and image card styling).
 
-![instant-gram](./instant-gram.gif)
 
-## Deliverables
+DIY-Gram is anti-persistence, so we won't be making any requests to a backend. Each time we refresh, all the photos will disappear.
 
-Build out the feature so that it functions in accordance with the gif above. Don't worry about the CSS/styling - just get the basic functionality working.
+## Part I
+![Challange Part I](./Code-Challange-Demo-Part-I.gif)
 
-Do your best to follow best practices/separation of concerns. Can you use separate classes? Make a model? Above all, though, just get it to work.
+Build out the feature so that it functions in accordance with the gif above. Don't overthink your code, just get the basic functionality working with a procedural approach.
 
-## Notes
+## Part II
+![Challange Part II](./Code-Challange-Demo-Part-II.gif)
 
-The jQuery library is included for you if you'd like to use it, as well as the Materialize CSS library. You may not use any other JavaScript libraries.
+Congratulations on getting the core functionality working.
+
+Now let's add some client side validations. If an image submission includes the same url or caption of an existing image display an error message to the user and do not add the image.
+
+For this part of the challenge do your best to apply good programming practices to your solution.
+
+## Notes on creating a modal in Materialize CSS
+To open a modal using a trigger:
+```
+// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+$('.modal').modal();
+```
+
+The element responsable for closing the modal (likely the form submit button) should should include the `modal-close` class in order to automatically close the modal.
+
+You can view the Materialize CSS documentation [here](http://materializecss.com/modals.html).
