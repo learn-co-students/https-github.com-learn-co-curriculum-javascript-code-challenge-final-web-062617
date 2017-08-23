@@ -35,9 +35,9 @@ For this part of the challenge do your best to apply good programming practices 
 To open a modal using a trigger:
 ```
 // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-$('.modal').modal();
+$('#modal').modal();
 ```
 
-The element responsable for closing the modal (likely the form submit button) should should include the `modal-close` class in order to automatically close the modal.
+The element responsible for closing the modal (likely the form submit button) should should include the `modal-close` class in order to automatically close the modal.
 
 You can view the Materialize CSS documentation [here](http://materializecss.com/modals.html).
